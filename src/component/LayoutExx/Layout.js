@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Layheader from './Layheader'
-import Navigation from './Navigation'
-import Content from './Content'
 import Footer from './Footer'
+import Banner from './Banner'
+import Item from './Item'
 
 export default class Layout extends Component {
   render() {
@@ -19,17 +19,27 @@ export default class Layout extends Component {
               <Layheader />
             </div>
         </div>
-        <div className='row'>
-            <div style={noSp} className='col-4'>
-              <Navigation />
+        <div className='row col-8 position-relative top-0 start-50 translate-middle-x mt-3'>
+            <div style={noSp} className='row bg-secondary-subtle border border-3 border-info py-5'>
+              <Banner />
             </div>
-            <div style={noSp} className='col-8'>
-              
-              <Content />
+            <div className='row'>
+              <div className='col-3'>
+                <Item />
+              </div>
+              <div className='col-3'>
+                <Item />
+              </div>
+              <div className='col-3'>
+                <Item />
+              </div>
+              <div className='col-3'>
+                <Item />
+              </div>
             </div>
         </div>
         <div className='row'>
-            <div style={noSp} className='col-12 bg-warning-subtle'>
+            <div style={noSp} className='col-12 bg-dark'>
               
               <Footer />
             </div>
